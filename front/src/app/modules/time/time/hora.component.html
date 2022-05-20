@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <h1>
+        Welcome! you wanna know what time it is?
+    </h1>
+    <button (click)="askHour()" type="button">
+        Get Hour
+    </button>
+    <p>
+        The time is {{actualTime}}
+
+    </p>
+    <p *ngIf="showErrorMessage">
+        There was an error getting the time
+    </p>
+</body>

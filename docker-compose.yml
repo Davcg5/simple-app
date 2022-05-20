@@ -1,0 +1,20 @@
+version: "3"
+services:
+  frontend:
+    container_name: angular-container
+    build: ./front
+    ports:
+      - 9000:4200
+    volumes:
+        - "./front:/app"
+    
+    
+  backend:
+    build:
+      context: ./back/app
+      dockerfile: Dockerfile
+    container_name: "backend"
+    volumes:
+        - ./back:/app 
+    ports:
+      - 5676:5676
