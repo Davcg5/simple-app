@@ -29,5 +29,5 @@ jobs:
         with:
           context: ./back/app
           push: true
-          tags: ${{ env.REGISTRY }}/${{ github.repository }}/server:${{ github.sha }}
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
