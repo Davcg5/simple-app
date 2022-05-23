@@ -24,17 +24,10 @@ jobs:
         with:
           images: davcg5/time-app-back
 
-      - name: Declare some variables
-        id: vars
-        shell: bash
-        run: |
-          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
           context: ./back/app
           push: true
-          tags: ${{ steps.vars.outputs.sha_short }}
+          tags: ${{ env.REGISTRY }}/${{ github.repository }}/server:${{ github.sha }}
           labels: ${{ steps.meta.outputs.labels }}
