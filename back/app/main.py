@@ -4,6 +4,12 @@ from datetime import datetime
 app = Flask(__name__)
 cors = CORS(app)
 
+@app.route("/healthy")
+def healthy():
+    return jsonify({
+        "status":"OK"
+    })
+
 @app.route("/get-hour")
 @cross_origin()
 def hello_world():
