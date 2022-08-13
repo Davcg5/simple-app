@@ -25,15 +25,15 @@ jobs:
         node-version: 16.14.2
     - name: Move to folder
       run: cd front
-
+  
     - name: Install dependencies
-      run: npm install
+      run: npm --prefix ./front install
 
     - name: Run tests
-      run: npm run test:headless
+      run: npm --prefix ./front run test:headless
 
     - name: Build
-      run: npm run build:prod
+      run: npm --prefix ./front run build:prod
 
     - name: Deploy
       if: success()
