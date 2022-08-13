@@ -23,9 +23,10 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 16.14.2
+    - name: Move to folder
+      run: cd front
 
     - name: Install dependencies
-      working-directory: ./front
       run: npm install
 
     - name: Run tests
