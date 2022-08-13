@@ -25,6 +25,7 @@ jobs:
         node-version: 16.14.2
 
     - name: Install dependencies
+      working-directory: ./front
       run: npm install
 
     - name: Run tests
