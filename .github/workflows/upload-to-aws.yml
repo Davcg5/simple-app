@@ -8,6 +8,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./front
     steps:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
@@ -27,13 +30,13 @@ jobs:
       run: cd front
   
     - name: Install dependencies
-      run: npm --prefix ./front install
+      run: npm install
 
     - name: Run tests
-      run: npm --prefix ./front run test:headless
+      run: npm run test:headless
 
     - name: Build
-      run: npm --prefix ./front run build:prod
+      run: npm run build:prod
 
     - name: Deploy
       if: success()
