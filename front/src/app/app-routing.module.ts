@@ -6,7 +6,7 @@ const routes: Routes = [
     path:'',
     loadChildren:() =>
     import('./modules/time/time.module').then(
-      (mod) => mod.HoraModule
+      (mod) => mod.HourModule
     )
   }
 

@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { REST_SERVICES } from './constants/rest_services';
-import { HoraModule } from './modules/time/time.module';
+import { HourModule } from './modules/time/time.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { HoraModule } from './modules/time/time.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HoraModule,
+    HourModule,
     HttpClientModule
   ],
   providers: [...REST_SERVICES],

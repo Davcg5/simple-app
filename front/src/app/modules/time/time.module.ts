@@ -1,17 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { HoraRoutingModule } from './time.routing-module';
+import { HourRoutingModule } from './time.routing-module';
 
-import { HoraComponent } from './time/hora.component';
+import { HourComponent } from './time/hour.component';
 
 @NgModule({
   declarations: [
-    HoraComponent
+    HourComponent
   ],
   imports: [
     CommonModule,
-    HoraRoutingModule
+    HourRoutingModule
   ],
   providers: [],
 })
-export class HoraModule { }
+export class HourModule { }

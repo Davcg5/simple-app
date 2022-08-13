@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HoraComponent } from './time/hora.component';
+import { HourComponent } from './time/hour.component';
 
 export const routes: Routes = [
     {
         path:'',
-        component: HoraComponent
+        component: HourComponent
     }
 ]
 
@@ -14,4 +14,4 @@ export const routes: Routes = [
     exports:[RouterModule]
 })
 
-export class HoraRoutingModule{}
+export class HourRoutingModule{}
